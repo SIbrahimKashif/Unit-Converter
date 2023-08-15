@@ -82,7 +82,6 @@ while True:
             elif unit_from == "lbs" and unit_to == "kg":
                 output = lb_to_kg(value)
             else:
-                # Handle invalid conversion types
                 output = "Error: Invalid conversion"
 
             window["output"].update(f"{output}")
@@ -90,9 +89,7 @@ while True:
             window["output"].update("Error: Please enter a number")
 
     elif event == "clear":
-        input = ""
-        output = ""
-        window["output"].update(output)
-        window["input"].update(input)
+        window["output"].update('')
+        window["input"].update('')
 
 window.close()
